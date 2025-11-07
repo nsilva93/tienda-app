@@ -1,59 +1,32 @@
-# TiendaApp
+# 🛒 TiendaApp – Frontend (Angular 20)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+Este proyecto forma parte de la solución solicitada en la **Prueba Técnica para la posición de Desarrollador .NET**.  
+El Frontend fue desarrollado con **Angular 20**, utilizando **Angular Material**, **Lazy Loading**, **Ruteo protegido con AuthGuard**, y **servicios HttpClient** para comunicarse con el API en .NET Core 3.1.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✅ Estado del Proyecto
 
-```bash
-ng serve
-```
+Por falta de tiempo, **no se completó al 100%**, pero se entregan:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### ✅ Funcionalidades Implementadas
+- ✅ Estructura modular (features): *auth*, *artículos*, *carrito*, *tiendas*
+- ✅ Pantalla de **Login** funcional
+- ✅ Petición **POST /api/Auth/login** al backend  
+  - Se obtiene el token correctamente  
+  - El token se guarda en **localStorage**
+- ✅ **AuthGuard** activado y funcionando
+  - Si no hay token → redirige a `/auth`
+  - Si hay token → acceso permitido
+- ✅ Redirección a la pantalla de **artículos**
+- ✅ Pantalla de Artículos mostrando el texto *"articulos works!"* (inicio del módulo)
+- ✅ Proyecto organizado en componentes, módulos y servicios
 
-## Code scaffolding
+### ⏳ Funcionalidades Pendientes por Falta de Tiempo
+- CRUD de Artículos
+- CRUD de Tiendas
+- CRUD de Cliente-Artículo (carrito / compras)
+- Integración completa del carrito
+- Diseño final de pantallas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Nota: Debido a falta de tiempo, se decidió entregar el avance funcional con login, guard y navegación correcta.
