@@ -1,0 +1,31 @@
+<h2>Tiendas</h2>
+
+<button routerLink="/tiendas/crear">Nueva Tienda</button>
+
+<table *ngIf="!loading; else loadingTpl">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Sucirsal</th>
+      <th>Dirección</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let t of tiendas">
+      <td>{{ t.id }}</td>
+      <td>{{ t.sucursal }}</td>
+      <td>{{ t.direccion }}</td>
+      <td>
+        <button [routerLink]="['/tiendas/editar', t.id]">Editar</button>
+        <button (click)="delete(t.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #loadingTpl>
+  Cargando...
+</ng-template>
+

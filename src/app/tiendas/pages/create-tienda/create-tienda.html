@@ -1,0 +1,12 @@
+<h2>Nueva Tienda</h2>
+
+<form (ngSubmit)="save()">
+  <label>Sucursal</label>
+  <input [(ngModel)]="tienda.sucursal" name="sucursal">
+
+  <label>Dirección</label>
+  <input [(ngModel)]="tienda.direccion" name="direccion">
+
+  <button type="submit">Guardar</button>
+  <button routerLink="/tiendas" type="button">Cancelar</button>
+</form>

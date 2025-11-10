@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="left">
+    <span class="title">Tienda App</span>
+  </div>
+
+  <div class="center">
+    <a routerLink="/articulos">Artículos</a>
+    <a routerLink="/clientes">Clientes</a>
+    <a routerLink="/tiendas">Tiendas</a>
+    <a routerLink="/carrito">Carrito</a>
+  </div>
+
+  <div class="right" *ngIf="clienteNombre">
+    <span>Bienvenido, {{ clienteNombre }}</span>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
+</nav>
+
+

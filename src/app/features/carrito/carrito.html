@@ -1,0 +1,28 @@
+<h2>Carrito</h2>
+
+<table *ngIf="!loading && items.length; else emptyTpl">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Artículo Id</th>
+      <th>Fecha</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let it of items; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ it.articuloId }}</td>
+      <td>{{ it.fecha | date:'short' }}</td>
+      <td>
+        <button (click)="remove(it.articuloId)">Quitar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #emptyTpl>
+  <div *ngIf="!loading">Tu carrito está vacío.</div>
+  <div *ngIf="loading">Cargando…</div>
+</ng-template>
+

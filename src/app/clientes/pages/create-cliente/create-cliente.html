@@ -1,0 +1,24 @@
+<h2>Nuevo Cliente</h2>
+
+<form (ngSubmit)="save()">
+
+  <label>Nombre</label>
+  <input [(ngModel)]="cliente.nombre" name="nombre">
+
+  <label>Apellidos</label>
+  <input [(ngModel)]="cliente.apellidos" name="apellidos">
+
+  <label>Dirección</label>
+  <input [(ngModel)]="cliente.direccion" name="direccion">
+
+  <label>Email</label>
+  <input [(ngModel)]="cliente.email" name="email">
+
+  <label>Password</label>
+  <input [(ngModel)]="cliente.passwordHash" name="passwordHash">
+
+  <button type="submit">Guardar</button>
+  <button routerLink="/clientes" type="button">Cancelar</button>
+
+</form>
+

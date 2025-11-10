@@ -1,0 +1,37 @@
+<h2>Clientes</h2>
+
+<button routerLink="/clientes/crear">Nuevo Cliente</button>
+
+<table *ngIf="!loading; else loadingTpl">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Dirección</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let c of clientes">
+      <td>{{ c.id }}</td>
+      <td>{{ c.nombre }}</td>
+      <td>{{ c.apellidos }}</td>
+      <td>{{ c.direccion }}</td>
+      <td>{{ c.email }}</td>
+      <td>{{ c.passwordHash }}</td>
+      <td>
+        <button [routerLink]="['/clientes/editar', c.id]">Editar</button>
+        <button (click)="delete(c.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #loadingTpl>
+  Cargando...
+</ng-template>
+

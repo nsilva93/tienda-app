@@ -1,0 +1,38 @@
+.navbar {
+  background: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  a {
+    margin: 0 10px;
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  button {
+    margin-left: 15px;
+    background: #ff5252;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #ff3333;
+  }
+}
